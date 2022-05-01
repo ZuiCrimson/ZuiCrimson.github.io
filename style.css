@@ -1042,6 +1042,10 @@ textarea {
         z-index: 1;
     }
 
+    .counter::before {
+        font-size: 1.6em;
+    }
+
     .about .row .about-img {
         height: 250px !important;
     }
@@ -1338,6 +1342,10 @@ textarea {
         font-size: 1.4em;
         font-weight: 700;
         z-index: 1;
+    }
+
+    .counter::before {
+        font-size: 1.7em;
     }
 
     .about .row .about-img {
@@ -1637,6 +1645,10 @@ textarea {
         z-index: 1;
     }
 
+    .counter::before {
+        font-size: 2em;
+    }
+
     .about .container .row:nth-child(2) .ket-propil {
         margin-top: 20px;
         padding-right: 50px;
@@ -1739,6 +1751,10 @@ textarea {
         z-index: 1;
     }
 
+    .counter::before {
+        font-size: 3em;
+    }
+
     .about .container .row:nth-child(2) {
         display: grid;
     }
@@ -1835,6 +1851,10 @@ textarea {
         z-index: 1;
     }
 
+    .counter::before {
+        font-size: 4em;
+    }
+
     .about .container .row:nth-child(2) {
         display: grid;
     }
@@ -1915,6 +1935,10 @@ textarea {
         font-size: 4em;
         font-weight: 700;
         z-index: 1;
+    }
+
+    .counter::before {
+        font-size: 4.5em;
     }
 
     .about .row .about-img {
