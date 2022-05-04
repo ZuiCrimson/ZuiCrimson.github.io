@@ -138,7 +138,7 @@ body {
     color: #fff;
     font-size: 5em;
     font-weight: 700;
-    z-index: 1;
+    z-index: 20;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,6 +169,20 @@ body {
 
 
 /* End Preloader */
+
+/* Mouse Trail */
+#canva {
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* End Mouse trail */
+
+
 
 
 
@@ -225,6 +239,12 @@ section {
     color: #ffffff;
 }
 
+#row1 {
+    z-index: 3 !important;
+    position: relative !important;
+}
+
+
 #home .ket-hero h4 {
     font-size: var(--ukuran-p);
     margin-bottom: 15px;
@@ -236,17 +256,13 @@ section {
     transition: all 0.8s;
     opacity: 0;
     transform: translateY(40px);
+    position: relative;
 }
 
 #home .ket-hero.inview {
     opacity: 1;
     transform: none;
     transition-delay: 8.17s;
-}
-
-.overlay {
-    position: relative;
-    z-index: 2;
 }
 
 #home .btn {
@@ -284,11 +300,16 @@ section {
     padding: 80px;
 }
 
+.ket-about {
+    z-index: 3 !important;
+}
+
 .ket-about .divider {
     background-color: #2FA4FF;
     height: 2px;
     width: 120px;
     margin: 18px auto;
+    z-index: 3 !important;
 }
 
 .about .row .about-img {
@@ -297,6 +318,7 @@ section {
     transition: all 0.8s;
     opacity: 0;
     transform: translate(40px);
+    z-index: 3 !important;
 }
 
 .about .row .about-img.inview2 {
@@ -323,6 +345,7 @@ section {
     transition: all 0.8s;
     opacity: 0;
     transform: translate(-40px);
+    z-index: 3 !important;
 }
 
 .about .row .ket-propil.inview3 {
@@ -340,6 +363,7 @@ section {
     align-items: center;
     margin: 24px 24px 0 0px;
     padding: 0;
+    z-index: 3 !important;
 }
 
 .skills .bot h4 {
@@ -455,6 +479,11 @@ section {
     background: #2FA4FF;
 }
 
+.ket-edu {
+    position: relative;
+    z-index: 3 !important;
+}
+
 .ket-edu h2 {
     margin-top: -40px;
 }
@@ -517,6 +546,7 @@ section {
     margin-right: 2rem;
     padding: 0;
     transition: 0.3s ease-in-out;
+    z-index: 3 !important;
 }
 
 .boks i:hover {
@@ -526,6 +556,7 @@ section {
 .boks .info-edu {
     border-left: .3rem solid #2787d1;
     padding-left: 1rem;
+    z-index: 3 !important;
 }
 
 .boks .info-edu h5 {
@@ -547,6 +578,8 @@ section {
 /* Experience Section Start */
 .ket-exp h2 {
     margin-top: -40px;
+    z-index: 3 !important;
+    position: relative;
 }
 
 .ket-exp .divider {
@@ -554,6 +587,8 @@ section {
     height: 2px;
     width: 120px;
     margin: 18px auto;
+    z-index: 3 !important;
+    position: relative;
 }
 
 #cntexp-1 {
@@ -598,6 +633,8 @@ section {
     box-shadow: 0 0 .3rem #333;
     transition: 0.4s;
     width: 100%;
+    z-index: 3 !important;
+    position: relative;
 }
 
 .experience .row .gmb-exp img:hover {
@@ -607,6 +644,8 @@ section {
 .experience .row .info-exp {
     padding-top: 50px;
     padding-left: 30px;
+    z-index: 3 !important;
+    position: relative;
 }
 
 .experience .row .info-exp h4 {
@@ -639,6 +678,8 @@ section {
 
 .ket-goals h2 {
     margin-top: -30px;
+    position: relative;
+    z-index: 3 !important;
 }
 
 .ket-goals .divider {
@@ -646,6 +687,8 @@ section {
     height: 2px;
     width: 120px;
     margin: 18px auto;
+    position: relative;
+    z-index: 3 !important;
 }
 
 .goals {
@@ -657,6 +700,7 @@ section {
     opacity: 0;
     transition: all 0.8s;
     transform: translate(40px);
+    z-index: 3 !important;
 }
 
 .goals #goals-2.inview9 {
@@ -669,6 +713,7 @@ section {
     opacity: 0;
     transition: all 0.8s;
     transform: translateY(40px);
+    z-index: 3 !important;
 }
 
 .goals #goals-3.inview10 {
@@ -681,6 +726,7 @@ section {
     opacity: 0;
     transition: all 0.8s;
     transform: translate(-40px);
+    z-index: 3 !important;
 }
 
 .goals #goals-4.inview11 {
@@ -842,17 +888,25 @@ section {
 
 
 /* Contact Section Start */
+.ket-contact {
+    position: relative;
+    z-index: 3 !important;
+}
+
 .ket-contact .divider {
     background-color: #333;
     height: 2px;
     width: 120px;
     margin: 18px auto;
+    position: relative;
+    z-index: 3 !important;
 }
 
 #kontak {
     opacity: 0;
     transition: all 0.8s;
     transform: translateY(20px);
+    z-index: 3 !important;
 }
 
 #kontak.inview12 {
@@ -1007,6 +1061,7 @@ textarea {
     justify-content: flex-start;
     flex-wrap: nowrap;
     align-items: center;
+    z-index: 3 !important;
 }
 
 #footer li {
@@ -1039,11 +1094,15 @@ textarea {
         color: #fff;
         font-size: 1.3em;
         font-weight: 700;
-        z-index: 1;
+        z-index: 20;
     }
 
     .counter::before {
         font-size: 1.6em;
+    }
+
+    #canva {
+        display: none !important;
     }
 
     .about .row .about-img {
@@ -1341,12 +1400,17 @@ textarea {
         color: #fff;
         font-size: 1.4em;
         font-weight: 700;
-        z-index: 1;
+        z-index: 20;
     }
 
     .counter::before {
         font-size: 1.7em;
     }
+
+    #canva {
+        display: none !important;
+    }
+
 
     .about .row .about-img {
         height: 280px !important;
@@ -1642,8 +1706,13 @@ textarea {
         color: #fff;
         font-size: 1.8em;
         font-weight: 700;
-        z-index: 1;
+        z-index: 20;
     }
+
+    #canva {
+        display: none !important;
+    }
+
 
     .counter::before {
         font-size: 2em;
@@ -1748,12 +1817,17 @@ textarea {
         color: #fff;
         font-size: 2.5em;
         font-weight: 700;
-        z-index: 1;
+        z-index: 20;
     }
 
     .counter::before {
         font-size: 3em;
     }
+
+    #canva {
+        display: none !important;
+    }
+
 
     .about .container .row:nth-child(2) {
         display: grid;
@@ -1848,12 +1922,17 @@ textarea {
         color: #fff;
         font-size: 3.5em;
         font-weight: 700;
-        z-index: 1;
+        z-index: 20;
     }
 
     .counter::before {
         font-size: 4em;
     }
+
+    #canva {
+        display: none !important;
+    }
+
 
     .about .container .row:nth-child(2) {
         display: grid;
@@ -1934,7 +2013,7 @@ textarea {
         color: #fff;
         font-size: 4em;
         font-weight: 700;
-        z-index: 1;
+        z-index: 20;
     }
 
     .counter::before {
