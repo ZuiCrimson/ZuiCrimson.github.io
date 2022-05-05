@@ -244,6 +244,46 @@ section {
     position: relative !important;
 }
 
+#home .ket-hero h1 .typed-text {
+    font-weight: bold;
+    color: #fff;
+    font-family: var(--font-h);
+}
+
+#home .cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #000;
+    margin-left: 0.1rem;
+    animation: blink 1s infinite;
+}
+
+#home .cursor.typing {
+    animation: none;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #000;
+    }
+
+    49% {
+        background-color: #000;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #000;
+    }
+}
+
 
 #home .ket-hero h4 {
     font-size: var(--ukuran-p);
@@ -257,6 +297,7 @@ section {
     opacity: 0;
     transform: translateY(40px);
     position: relative;
+    padding-top: 80px;
 }
 
 #home .ket-hero.inview {
