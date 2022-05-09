@@ -373,6 +373,7 @@ section {
     height: 100%;
     transition: 0.4s;
     border-radius: 10px;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.5);
 }
 
 .about .row .about-img img:hover {
