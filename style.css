@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     --font-utama: 'Dosis', sans-serif;
     --font-h: 'Poppins', sans-serif;
+    --font-h2: 'Rubik', sans-serif;
     --font-p: 'Quicksand', sans-serif;
     --font-keempat: 'Roboto', sans-serif;
+    --font-nama: 'Ms Madi', cursive;
+    --font-preload: 'Inconsolata', monospace;
     --primer-color: #40DFEF;
     --secondary-color: #B9F8D3;
     --warna-gradien1: hsl(204, 64%, 44%, 0.6);
@@ -13,6 +19,12 @@
     --ukuran-p: 14px;
     --btn-color: #2a92e2;
     --border-color: #2787d1;
+    --color-bg: #1f1f38;
+    --color-bg-variant: #2c2c6c;
+    --color-primary: #4db5ff;
+    --color-priamry-variant: rgba(77, 181, 255, 0.4);
+    --color-priamry-variant2: rgba(56, 52, 255, 0.4);
+    --color-priamry-variant3: rgba(23, 21, 153, 0.4);
 }
 
 body {
@@ -208,24 +220,74 @@ section {
     padding: 120px 80px 80px 80px;
 }
 
-.navbar {
-    transition: all 0.4s ease;
-    background: #0E185F;
+
+/* Navbar Section */
+.navbar-brand {
+    font-family: var(--font-preload);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #eee !important;
 }
 
-.navbar-dark .navbar-brand {
-    color: #fff;
+.navbar-light .navbar-toggler {
+    color: #eee !important;
+    background-color: #eee !important;
+    border-color: #eee !important;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: #fff;
-    font-weight: 700;
+.offcanvas {
+    background-color: rgba(145, 190, 216, 0.8) !important;
 }
 
-.navbar-dark .navbar-nav .nav-link.active {
-    color: red;
+.offcanvas-title {
+    color: #eee !important;
 }
 
+.offcanvas-body {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.offcanvas-body .nav-item {
+    margin: 8px;
+    background: #F6F54D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.7s ease-in-out;
+}
+
+.offcanvas-body .nav-item:hover {
+    background: #a7a735;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #000 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000 !important;
+    font-weight: 500;
+    font-family: var(--font-h);
+    font-size: 14px;
+    transition: all 0.7s ease-in-out;
+    text-transform: capitalize;
+}
+
+.offcanvas-body .nav-item:hover .nav-link {
+    color: #eee !important;
+}
+
+
+
+/* navbar Section End */
 
 
 /* Hero Section */
@@ -338,63 +400,151 @@ section {
 
 /* About Section */
 .about {
+    position: relative;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 80px;
+    display: grid;
+    background: #c7c7c7;
+}
+
+#about #container2 {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .ket-about {
     z-index: 3 !important;
 }
 
+.ket-about h2 {
+    font-family: var(--font-h2);
+    text-transform: capitalize;
+}
+
+
 .ket-about .divider {
     background-color: #2FA4FF;
-    height: 2px;
+    border-radius: 10px;
+    height: 3px;
     width: 120px;
     margin: 18px auto;
     z-index: 3 !important;
 }
 
-.about .row .about-img {
-    width: 500px;
-    height: 500px;
-    transition: all 0.8s;
-    opacity: 0;
-    transform: translate(40px);
+#about #row-about-2 {
+    position: relative;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#about #row-about-2 #luarbox-img-about {
+    position: relative;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 250px;
+    height: 250px;
+    margin: 30px;
     z-index: 3 !important;
+    opacity: 0;
+    transition: all 1.3s;
+    transform: scale(0);
 }
 
-.about .row .about-img.inview2 {
+#about #row-about-2 #luarbox-img-about.inview2 {
     opacity: 1;
-    transform: none;
-    transition-delay: 0.5s;
+    transform: scale(1);
 }
 
-.about .row .about-img img {
+#about #row-about-2 #luarbox-img-about .imgBx-about {
+    position: absolute !important;
     width: 100%;
     height: 100%;
-    transition: 0.4s;
     border-radius: 10px;
-    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.5);
+    background: var(--color-priamry-variant3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
-.about .row .about-img img:hover {
-    transform: scale(1.05);
+#about #row-about-2 #luarbox-img-about .imgBx-about img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 10px;
+    object-fit: cover !important;
+    transform: rotate(10deg);
+    transition: all 0.5s ease-in-out;
 }
 
-.about .row .ket-propil {
-    font-family: var(--font-p);
-    font-size: 20px;
-    text-align: justify;
-    transition: all 0.8s;
+#about #row-about-2 #luarbox-img-about .imgBx-about img:hover {
+    transform: rotate(0deg);
+}
+
+#about #row-about-2 #luarbox-ket-about {
+    display: grid;
+    position: relative;
+    padding: 30px 30px;
+    background: var(--color-bg);
+    border-radius: 10px;
+    margin: 30px;
+    transition: all 0.7s ease-in-out;
+    transform: translateY(40px);
     opacity: 0;
-    transform: translate(-40px);
     z-index: 3 !important;
 }
 
-.about .row .ket-propil.inview3 {
+#about #row-about-2 #luarbox-ket-about.inview3 {
     opacity: 1;
     transform: none;
     transition-delay: 0.5s;
 }
+
+#about #row-about-2 #luarbox-ket-about:hover {
+    background: transparent;
+    border: solid 3px var(--color-bg-variant);
+    transition-delay: 0.1s;
+}
+
+#about #row-about-2 #luarbox-ket-about:hover .ketBx-about h3 {
+    color: var(--color-bg);
+}
+
+#about #row-about-2 #luarbox-ket-about:hover .ketBx-about p {
+    color: var(--color-bg);
+}
+
+#about #row-about-2 #luarbox-ket-about .ketBx-about {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#about #row-about-2 #luarbox-ket-about .ketBx-about h3 {
+    font-family: var(--font-nama);
+    color: #cccccc;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#about #row-about-2 #luarbox-ket-about .ketBx-about p {
+    font-family: var(--font-p-st);
+    font-size: 14px;
+    text-align: center;
+    color: #cccccc;
+}
+
 
 .skills .bot {
     position: relative;
@@ -434,6 +584,14 @@ section {
     border-radius: 10px;
 }
 
+.skills #bot2 .percent div {
+    background: #ff0057;
+}
+
+.skills #bot3 .percent div {
+    background: #6665ee;
+}
+
 .skills .bot .percent span::before {
     position: absolute;
     content: "";
@@ -471,40 +629,209 @@ section {
     content: "80%";
 }
 
-
-.about .row .ket-propil .icons {
+#about #row-about-3 {
     position: relative;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 50px 30px;
+}
+
+#about #row-about-3 #luarbox-ikon-about {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    z-index: 3 !important;
+}
+
+#about #row-about-3 .luarbox-ikon-about1 {
     opacity: 0;
-    transition: all 0.8s;
+    transition: all 1s;
     transform: translateY(40px);
 }
 
-.about .row .ket-propil .icons.review {
+#about #row-about-3 .luarbox-ikon-about1.ripiew {
     opacity: 1;
+    transition-delay: 0.5s;
     transform: none;
-    transition-delay: 0.8s;
 }
 
-.about .row .ket-propil .icons a {
-    height: 4rem;
-    width: 4rem;
-    line-height: 4rem;
-    text-align: center;
-    background: #2FA4FF;
-    border-radius: 5rem;
-    font-size: 1.7rem;
-    color: #000;
-    margin-right: 1.5rem;
-    margin-top: 1.5rem;
-    transition: .4s;
+#about #row-about-3 .luarbox-ikon-about2 {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(40px);
+}
+
+#about #row-about-3 .luarbox-ikon-about2.ripiew2 {
+    opacity: 1;
+    transition-delay: 0.7s;
+    transform: none;
+}
+
+#about #row-about-3 .luarbox-ikon-about3 {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(40px);
+}
+
+#about #row-about-3 .luarbox-ikon-about3.ripiew3 {
+    opacity: 1;
+    transition-delay: 0.9s;
+    transform: none;
+}
+
+#about #row-about-3 .luarbox-ikon-about4 {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(40px);
+}
+
+#about #row-about-3 .luarbox-ikon-about4.ripiew4 {
+    opacity: 1;
+    transition-delay: 1.1s;
+    transform: none;
+}
+
+#about #row-about-3 .luarbox-ikon-about5 {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(40px);
+}
+
+#about #row-about-3 .luarbox-ikon-about5.ripiew5 {
+    opacity: 1;
+    transition-delay: 1.3s;
+    transform: none;
+}
+
+#about #row-about-3 .luarbox-ikon-about6 {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(40px);
+}
+
+#about #row-about-3 .luarbox-ikon-about6.ripiew6 {
+    opacity: 1;
+    transition-delay: 1.5s;
+    transform: none;
+}
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about {
+    position: relative;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 70px;
+    background: var(--color-priamry-variant3);
+    transition: all 0.5s ease-in-out;
+}
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about span {
+    display: block;
+    position: absolute;
+    background: #ffa217;
+    animation: colorbtn 1s linear infinite;
+}
+
+@keyframes colorbtn {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about:hover span:nth-child(2) {
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about:hover span:nth-child(4) {
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about .ikon-about {
     text-decoration: none;
 }
 
-.about .row .ket-propil .icons a:hover {
-    background: #195685;
-    transform: rotate(360deg);
-    color: #fff;
+#about #row-about-3 #luarbox-ikon-about .boxikon-about .ikon-about i {
+    font-size: 30px;
+    color: var(--color-bg);
+    transition: all 0.5s;
 }
+
+#about #row-about-3 #luarbox-ikon-about .boxikon-about:hover .ikon-about i {
+    color: #eee;
+}
+
 
 /* END About Section */
 
@@ -528,86 +855,133 @@ section {
 
 .ket-edu h2 {
     margin-top: -40px;
+    font-family: var(--font-h2);
+    text-transform: capitalize;
 }
 
 .ket-edu .divider {
     background-color: #195685;
-    height: 2px;
+    border-radius: 10px;
+    height: 3px;
     width: 120px;
     margin: 18px auto;
 }
 
-#boks1 {
-    opacity: 0;
-    transition: all 0.8s;
-    transform: translate(40px);
-}
-
-#boks1.inview4 {
-    opacity: 1;
-    transform: none;
-    transition-delay: 0.5s;
-}
-
-#boks2 {
-    opacity: 0;
-    transition: all 0.8s;
-    transform: translate(-40px);
-}
-
-#boks2.inview5 {
-    opacity: 1;
-    transform: none;
-    transition-delay: 0.5s;
-}
-
-#boks3 {
-    opacity: 0;
-    transition: all 0.8s;
-    transform: translate(40px);
-}
-
-#boks3.inview6 {
-    opacity: 1;
-    transform: none;
-    transition-delay: 0.5s;
-}
-
-.boks {
-    background: #fff;
-    margin: 10px;
-    padding: 2rem 2rem;
-    box-shadow: 0 0 .3rem #333;
-    border-radius: 10px;
+#education #row-edu-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
 }
 
-.boks i {
-    font-size: 5rem;
-    margin-right: 2rem;
+#education #row-edu-2 .cardBx {
+    position: relative;
+    z-index: 3 !important;
+}
+
+#education #row-edu-2 .cardBx .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+#education #row-edu-2 .cardBx .face.face1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transform: translateY(100px);
+    background: var(--color-bg);
+}
+
+#education #row-edu-2 .cardBx:hover .face.face1 {
+    transform: translateY(0);
+    background: #ff0057;
+}
+
+#education #row-edu-2 .cardBx .face.face1 .content {
+    opacity: 0.4;
+    transition: 0.5s;
+    color: #eee;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#education #row-edu-2 .cardBx:hover .face.face1 .content {
+    opacity: 1;
+}
+
+#education #row-edu-2 .cardBx .face.face1 .content i {
+    font-size: 70px;
+}
+
+#education #row-edu-2 .cardBx .face.face1 .content h3 {
+    margin: 10px 0 0;
     padding: 0;
-    transition: 0.3s ease-in-out;
-    z-index: 3 !important;
+    text-align: center;
+    font-size: 1.5em;
 }
 
-.boks i:hover {
-    transform: scale(1.1);
+#education #row-edu-2 .cardBx .face.face2 {
+    position: relative;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    transform: translateY(-100px);
 }
 
-.boks .info-edu {
-    border-left: .3rem solid #2787d1;
-    padding-left: 1rem;
-    z-index: 3 !important;
+#education #row-edu-2 .cardBx:hover .face.face2 {
+    transform: translateY(0px);
 }
 
-.boks .info-edu h5 {
-    color: #195685;
+#education #row-edu-2 .cardBx .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-p-st);
 }
 
-.boks .info-edu p {
-    color: #ffae00;
-    font-weight: bold;
+#education #row-edu-2 #cardBx1 {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(40px);
+}
+
+#education #row-edu-2 #cardBx1.inview4 {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.5s;
+}
+
+#education #row-edu-2 #cardBx2 {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(40px);
+}
+
+#education #row-edu-2 #cardBx2.inview5 {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.7s;
+}
+
+#education #row-edu-2 #cardBx3 {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(40px);
+}
+
+#education #row-edu-2 #cardBx3.inview6 {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.9s;
 }
 
 /* End Education Section */
@@ -618,94 +992,166 @@ section {
 
 
 /* Experience Section Start */
+#experience {
+    position: relative;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 80px;
+    background: #c7c7c7;
+}
+
 .ket-exp h2 {
-    margin-top: -40px;
     z-index: 3 !important;
     position: relative;
+    font-family: var(--font-h2);
+    text-transform: capitalize;
 }
 
 .ket-exp .divider {
     background-color: #2FA4FF;
-    height: 2px;
+    border-radius: 10px;
+    height: 3px;
     width: 120px;
     margin: 18px auto;
     z-index: 3 !important;
     position: relative;
 }
 
-#cntexp-1 {
-    opacity: 0;
-    transition: all 0.8s;
-    transform: translateY(40px);
+#experience #row-exp-2 {
+    position: relative;
+    display: flex;
 }
 
-#cntexp-1.inview7 {
-    opacity: 1;
-    transform: none;
-    transition-delay: 0.8s;
-}
-
-#cntexp-2 {
-    opacity: 0;
-    transition: all 0.8s;
-    transform: translateY(40px);
-}
-
-#cntexp-2.inview8 {
-    opacity: 1;
-    transform: none;
-    transition-delay: 0.8s;
-}
-
-.experience .row:nth-child(2) {
-    box-shadow: 0 0 .3rem #333;
-    padding: 1rem;
+#experience #row-exp-2 #luar-box-exp {
+    position: relative;
+    width: 270px;
+    height: 270px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
     border-radius: 10px;
-    margin-bottom: 10px;
+    z-index: 3 !important;
 }
 
-.experience .row:nth-child(3) {
-    box-shadow: 0 0 .3rem #333;
-    padding: 1rem;
-    border-radius: 10px;
+#experience #row-exp-2 #luar-box-exp:hover {
+    z-index: 1;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    transition-delay: 0.1s;
 }
 
-.experience .row .gmb-exp img {
-    border-radius: 10px;
-    box-shadow: 0 0 .3rem #333;
-    transition: 0.4s;
+#experience #row-exp-2 #luar-box-exp .gmb-exp {
+    position: absolute;
     width: 100%;
-    z-index: 3 !important;
-    position: relative;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
 }
 
-.experience .row .gmb-exp img:hover {
-    transform: scale(1.05);
+#experience #row-exp-2 #luar-box-exp .gmb-exp::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: hsl(340, 100%, 50%, 0.5);
+    border-radius: 10px;
+    mix-blend-mode: multiply;
+    transform: translateY(-300px);
+    transition: 0.5s;
 }
 
-.experience .row .info-exp {
-    padding-top: 50px;
-    padding-left: 30px;
-    z-index: 3 !important;
-    position: relative;
+#experience #row-exp-2 #luar-box-exp:hover .gmb-exp::before {
+    transform: translateY(0);
 }
 
-.experience .row .info-exp h4 {
-    font-family: var(--font-utama);
-    font-size: 28px;
+
+
+#experience #row-exp-2 #luar-box-exp .gmb-exp img {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+#experience #row-exp-2 #luar-box-exp .info-exp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 15px;
+    align-items: flex-end;
+}
+
+#experience #row-exp-2 #luar-box-exp .info-exp h4 {
+    color: #eeeeee;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-family: var(--font-h);
+    font-size: 20px;
+    transform: translateY(-300px) !important;
+}
+
+#experience #row-exp-2 #luar-box-exp:hover .info-exp h4 {
+    transform: translateY(0) !important;
+}
+
+#experience #row-exp-2 #luar-box-exp .info-exp h5 {
+    color: #F6F54D;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-family: var(--font-preload);
     letter-spacing: 1px;
-    font-weight: 700;
-    border-bottom: .1rem solid #2787d1;
+    transform: translateY(-300px) !important;
 }
 
-.experience .row .info-exp h5 {
-    color: #ffae00;
+#experience #row-exp-2 #luar-box-exp:hover .info-exp h5 {
+    transform: translateY(0) !important;
 }
 
-.experience .row .info-exp p {
-    font-size: 16px;
-    color: #000;
+#experience #row-exp-2 #luar-box-exp .info-exp p {
+    color: #eeeeee;
+    transition: 0.5s;
+    font-family: var(--font-p-st);
+    transform: translateY(-300px) !important;
 }
+
+#experience #row-exp-2 #luar-box-exp:hover .info-exp p {
+    transform: translateY(0) !important;
+}
+
+#experience #row-exp-2 .luar-box-exp1 {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s !important;
+}
+
+#experience #row-exp-2 .luar-box-exp1.inview7 {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.5s !important;
+}
+
+#experience #row-exp-2 .luar-box-exp2 {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s !important;
+}
+
+#experience #row-exp-2 .luar-box-exp2.inview8 {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.7s !important;
+}
+
 
 
 /* Experience Section End */
@@ -716,17 +1162,21 @@ section {
 .mygoals {
     min-height: 100vh;
     width: 100%;
+    background: #c7c7c7;
 }
 
 .ket-goals h2 {
     margin-top: -30px;
     position: relative;
     z-index: 3 !important;
+    font-family: var(--font-h2);
+    text-transform: capitalize;
 }
 
 .ket-goals .divider {
     background-color: #2FA4FF;
-    height: 2px;
+    height: 3px;
+    border-radius: 10px;
     width: 120px;
     margin: 18px auto;
     position: relative;
@@ -1194,30 +1644,6 @@ textarea {
         margin-left: -42px !important;
     }
 
-
-    .boks {
-        margin-left: 10px !important;
-    }
-
-    .boks {
-        flex-flow: column !important;
-        padding: 1.2rem;
-        align-items: center;
-    }
-
-    .boks i {
-        height: 7rem;
-        margin-right: 1rem;
-        margin-left: 1rem;
-    }
-
-    .boks .info-edu {
-        padding-left: 0;
-        padding-top: 1rem;
-        border: none;
-        text-align: center;
-    }
-
     .info-goals {
         margin-bottom: 50px !important;
     }
@@ -1501,29 +1927,6 @@ textarea {
         margin-left: -42px !important;
     }
 
-    .boks {
-        margin-left: 10px !important;
-    }
-
-    .boks {
-        flex-flow: column !important;
-        padding: 1.2rem;
-        align-items: center;
-    }
-
-    .boks i {
-        height: 7rem;
-        margin-right: 1rem;
-        margin-left: 1rem;
-    }
-
-    .boks .info-edu {
-        padding-left: 0;
-        padding-top: 1rem;
-        border: none;
-        text-align: center;
-    }
-
     .info-goals {
         margin-bottom: 50px !important;
     }
@@ -1782,10 +2185,6 @@ textarea {
         padding: 0;
     }
 
-    .boks {
-        margin-left: 10px !important;
-    }
-
     .goals {
         justify-content: center !important;
         position: relative;
@@ -1884,10 +2283,6 @@ textarea {
 
     .about .container .row:nth-child(2) .ket-propil p {
         font-size: 18px;
-    }
-
-    .boks {
-        margin-left: 10px !important;
     }
 
     .goals {

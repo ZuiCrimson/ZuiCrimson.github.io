@@ -179,7 +179,7 @@ io.observe(kethero);
 // END HERO SECTION
 
 // ABOUT SECTION
-const aboutimg = document.querySelector('.about-img');
+const luarboximgabout = document.querySelector('#luarbox-img-about');
 const cb2 = function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -190,22 +190,9 @@ const cb2 = function (entries) {
     });
 }
 const io2 = new IntersectionObserver(cb2);
-io2.observe(aboutimg);
+io2.observe(luarboximgabout);
 
-const icons = document.querySelector('.icons');
-const ic = function (entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('review');
-        } else {
-            entry.target.classList.remove('review');
-        }
-    });
-}
-const ip = new IntersectionObserver(ic);
-ip.observe(icons);
-
-const ketpropil = document.querySelector('.ket-propil');
+const luarboxketabout = document.querySelector('#luarbox-ket-about');
 const cb3 = function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -216,14 +203,92 @@ const cb3 = function (entries) {
     });
 }
 const io3 = new IntersectionObserver(cb3);
-io3.observe(ketpropil);
+io3.observe(luarboxketabout);
+
+const luarboxikonabout = document.querySelector('.luarbox-ikon-about1');
+const ikon1 = function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('ripiew');
+        } else {
+            entry.target.classList.remove('ripiew');
+        }
+    });
+}
+const ik = new IntersectionObserver(ikon1);
+ik.observe(luarboxikonabout);
+
+const luarboxikonabout2 = document.querySelector('.luarbox-ikon-about2');
+const ikon2 = function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('ripiew2');
+        } else {
+            entry.target.classList.remove('ripiew2');
+        }
+    });
+}
+const ik2 = new IntersectionObserver(ikon2);
+ik2.observe(luarboxikonabout2);
+
+const luarboxikonabout3 = document.querySelector('.luarbox-ikon-about3');
+const ikon3 = function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('ripiew3');
+        } else {
+            entry.target.classList.remove('ripiew3');
+        }
+    });
+}
+const ik3 = new IntersectionObserver(ikon3);
+ik3.observe(luarboxikonabout3);
+
+const luarboxikonabout4 = document.querySelector('.luarbox-ikon-about4');
+const ikon4 = function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('ripiew4');
+        } else {
+            entry.target.classList.remove('ripiew4');
+        }
+    });
+}
+const ik4 = new IntersectionObserver(ikon4);
+ik4.observe(luarboxikonabout4);
+
+const luarboxikonabout5 = document.querySelector('.luarbox-ikon-about5');
+const ikon5 = function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('ripiew5');
+        } else {
+            entry.target.classList.remove('ripiew5');
+        }
+    });
+}
+const ik5 = new IntersectionObserver(ikon5);
+ik5.observe(luarboxikonabout5);
+
+const luarboxikonabout6 = document.querySelector('.luarbox-ikon-about6');
+const ikon6 = function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('ripiew6');
+        } else {
+            entry.target.classList.remove('ripiew6');
+        }
+    });
+}
+const ik6 = new IntersectionObserver(ikon6);
+ik6.observe(luarboxikonabout6);
 // END ABOUT SECTION
 
 
 
 // EDUCATION SECTION
-const boks1 = document.querySelector('#boks1');
-const cb4 = function (entries) {
+const cardBx = document.querySelector('#cardBx1');
+const card1 = function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('inview4');
@@ -232,10 +297,11 @@ const cb4 = function (entries) {
         }
     });
 }
-const io4 = new IntersectionObserver(cb4);
-io4.observe(boks1);
-const boks2 = document.querySelector('#boks2');
-const cb5 = function (entries) {
+const crd = new IntersectionObserver(card1);
+crd.observe(cardBx);
+
+const cardBx2 = document.querySelector('#cardBx2');
+const card2 = function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('inview5');
@@ -244,10 +310,11 @@ const cb5 = function (entries) {
         }
     });
 }
-const io5 = new IntersectionObserver(cb5);
-io5.observe(boks2);
-const boks3 = document.querySelector('#boks3');
-const cb6 = function (entries) {
+const crd2 = new IntersectionObserver(card2);
+crd2.observe(cardBx2);
+
+const cardBx3 = document.querySelector('#cardBx3');
+const card3 = function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('inview6');
@@ -256,15 +323,15 @@ const cb6 = function (entries) {
         }
     });
 }
-const io6 = new IntersectionObserver(cb6);
-io6.observe(boks3);
+const crd3 = new IntersectionObserver(card3);
+crd3.observe(cardBx3);
 // END EDUCATION SECTION
 
 
 
 // EXPERIENCE SECTION
-const cntexp1 = document.querySelector('#cntexp-1');
-const cb7 = function (entries) {
+const luarboxexp1 = document.querySelector('.luar-box-exp1');
+const boxexp1 = function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('inview7');
@@ -273,10 +340,11 @@ const cb7 = function (entries) {
         }
     });
 }
-const io7 = new IntersectionObserver(cb7);
-io7.observe(cntexp1);
-const cntexp2 = document.querySelector('#cntexp-2');
-const cb8 = function (entries) {
+const exp1 = new IntersectionObserver(boxexp1);
+exp1.observe(luarboxexp1);
+
+const luarboxexp2 = document.querySelector('.luar-box-exp2');
+const boxexp2 = function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('inview8');
@@ -285,8 +353,8 @@ const cb8 = function (entries) {
         }
     });
 }
-const io8 = new IntersectionObserver(cb8);
-io8.observe(cntexp2);
+const exp2 = new IntersectionObserver(boxexp2);
+exp2.observe(luarboxexp2);
 // END EXPERIENCE SECTIOn
 
 

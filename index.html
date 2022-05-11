@@ -86,31 +86,40 @@
 
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-light fixed-top" style="background: #0E185F;">
     <div class="container">
-      <a class="navbar-brand" href="#">FERY FIRDAUS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">Fery Firdaus</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#mygoals">My Goals</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Fery Firdaus</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mygoals">My Goals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -137,23 +146,27 @@
 
   <!-- About Section -->
   <section id="about" class="about text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8  mx-auto ket-about">
-          <h2>About Me</h2>
+    <div class="container2">
+      <div class="row" id="row-about-1">
+        <div class="col-md-8 mb-5 mx-auto ket-about">
+          <h2>About</h2>
           <div class="divider"></div>
         </div>
       </div>
-      <div class="row w-100 mx-auto">
-        <div class="col-sm-md-lg-6 mx-auto about-img" id="about-img" data-aos="zoom-in" data-aos-duration="1100"
-          data-aos-offset="75">
-          <img src="img/satu.jpg" alt="PotoProfil" class="img-fluid">
+      <div class="row" id="row-about-2">
+        <div class="col-lg-5 col-md-12" id="luarbox-img-about">
+          <div class="imgBx-about">
+            <img src="img/satu.jpg" alt="profilabout" class="img-fluid">
+          </div>
         </div>
-        <div class="col-lg-6 ket-propil" id="ket-propil" data-aos="fade-up" data-aos-duration="1000"
-          data-aos-offset="75">
-          <p>I am a student from Semarang State Polytechnic, 3-years Diploma in Electro Tech, Majoring Telecommunication
-            Tech. I have specialized my skills at networking and data telecommunication. I have a lot of basic knowledge
-            about networks and telecommunication.</p>
+        <div class="col-lg-7 col-md-12" id="luarbox-ket-about">
+          <div class="ketBx-about">
+            <h3>Fery Firdaus</h3>
+            <p>My name is Fery Firdaus. I am a student from Semarang State Polytechnic, 3-years Diploma in
+              Electro Tech, Majoring Telecommunication Tech. I have specialized my skills at networking
+              and data telecommunication. I have a lot of basic knowledge about networks and
+              telecommunication.</p>
+          </div>
           <div class="skills" id="skills">
             <div class="bot" id="bot1">
               <h4>Networking</h4>
@@ -174,10 +187,63 @@
               </div>
             </div>
           </div>
-          <div class="icons text-center">
-            <a href="https://web.facebook.com/ZuiCrimson" class="fa-brands fa-facebook-f"></a>
-            <a href="https://www.instagram.com/feryfirdaus_zr/" class="fa-brands fa-instagram"></a>
-            <a href="https://www.youtube.com/channel/UCHftatTPjsM22SL9Ily_80w" class="fa-brands fa-youtube"></a>
+        </div>
+      </div>
+      <div class="row" id="row-about-3">
+        <div class="col-lg-2 col-md-6 col-sm-6 luarbox-ikon-about1" id="luarbox-ikon-about">
+          <div class="boxikon-about">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="https://web.facebook.com/ZuiCrimson" class="ikon-about"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6 luarbox-ikon-about2" id="luarbox-ikon-about">
+          <div class="boxikon-about">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="https://www.instagram.com/feryfirdaus_zr/" class="ikon-about"><i
+                class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6 luarbox-ikon-about3" id="luarbox-ikon-about">
+          <div class="boxikon-about">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="https://www.youtube.com/channel/UCHftatTPjsM22SL9Ily_80w" class="ikon-about"><i
+                class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6 luarbox-ikon-about4" id="luarbox-ikon-about">
+          <div class="boxikon-about">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="https://twitter.com/feryfirdaus1811" class="ikon-about"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6 luarbox-ikon-about5" id="luarbox-ikon-about">
+          <div class="boxikon-about">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="https://github.com/ZuiCrimson/" class="ikon-about"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6 luarbox-ikon-about6" id="luarbox-ikon-about">
+          <div class="boxikon-about">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="http://fery.tk-2b.com/job2/" class="ikon-about"><i class="fa-solid fa-angles-right"></i></a>
           </div>
         </div>
       </div>
@@ -197,31 +263,44 @@
           <div class="divider"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-6 d-flex boks" id="boks1" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="75">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <div class="info-edu">
-            <h5>SMP EKA SAKTI SEMARANG</h5>
-            <p>2013 - 2017</p>
+      <div class="row" id="row-edu-2">
+        <div class="col-lg-4 col-md-6 col-sm-12 cardBx" id="cardBx1">
+          <div class="face face1">
+            <div class="content">
+              <i class="fa-solid fa-user-graduate"></i>
+              <h3>SMP Eka Sakti</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>I started attending Junior High School in 2013 and graduated in 2017</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 d-flex ms-auto boks" id="boks2" data-aos="fade-up" data-aos-duration="1000"
-          data-aos-offset="75">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <div class="info-edu">
-            <h5>SMK HIDAYAH SEMARANG</h5>
-            <p>2017 - 2020</p>
+        <div class="col-lg-4 col-md-6 col-sm-12 cardBx" id="cardBx2">
+          <div class="face face1">
+            <div class="content">
+              <i class="fa-solid fa-user-graduate"></i>
+              <h3>SMK Hidayah</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>I started attending Vocation High School in 2017 and graduated in 2020</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 d-flex boks" id="boks3" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="75">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <div class="info-edu">
-            <h5>POLITEKNIK NEGERI SEMARANG</h5>
-            <p>2020 - NOW</p>
+        <div class="col-lg-4 col-md-6 col-sm-12 cardBx" id="cardBx3">
+          <div class="face face1">
+            <div class="content">
+              <i class="fa-solid fa-school"></i>
+              <h3>Politeknik Negeri Semarang</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>I started college in 2020 until now </p>
+            </div>
           </div>
         </div>
       </div>
@@ -241,24 +320,30 @@
           <div class="divider"></div>
         </div>
       </div>
-      <div class="row" id="cntexp-1">
-        <div class="col-lg-4 gmb-exp">
-          <img src="img/bpsdmd.jpg" alt="">
+      <div class="row d-flex justify-content-evenly" id="row-exp-2">
+        <div class="col-lg-4 col-sm-12 mb-5 luar-box-exp1" id="luar-box-exp">
+          <div class="gmb-exp">
+            <img src="img/bpsdmd.jpg" alt="">
+          </div>
+          <div class="info-exp">
+            <div>
+              <h4>BPSDMD PROV JATENG</h4>
+              <h5>JUL - NOV 2018</h5>
+              <p>Maintenance of Computers and Internet Computer Laboratories</p>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-8 info-exp">
-          <h4>BPSDMD PROV JATENG</h4>
-          <h5>JUL - NOV 2018</h5>
-          <p>Maintenance of Computers and Internet Computer Laboratories</p>
-        </div>
-      </div>
-      <div class="row pt-5" id="cntexp-2">
-        <div class="col-lg-4 gmb-exp">
-          <img src="img/bpsdmd.jpg" alt="">
-        </div>
-        <div class="col-lg-8 info-exp">
-          <h4>BPSDMD PROV JATENG</h4>
-          <h5>JUN - AUG 2019</h5>
-          <p>Hardware, Software and Network Trouble Computer Laboratories</p>
+        <div class="col-lg-4 col-sm-12 luar-box-exp2" id="luar-box-exp">
+          <div class="gmb-exp">
+            <img src="img/bpsdmd.jpg" alt="">
+          </div>
+          <div class="info-exp">
+            <div>
+              <h4>BPSDMD PROV JATENG</h4>
+              <h5>JUN - AUG 2019</h5>
+              <p>Hardware, Software and Network Trouble Computer Laboratories</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
